@@ -60,11 +60,16 @@ class Golem < Formula
       do_install(res.downloader.cached_location)
     end
 
+    prefix.install Dir['*']
 
-    bin.install "golem"
-
+    cd prefix do
+      system "#{HOMEBREW_PREFIX}/bin/pip install --upgrade pip setuptools"
+      system "sudo #{HOMEBREW_PREFIX}/bin/pip install -vr requirements.txt"
+      system "sudo #{HOMEBREW_PREFIX}/bin/python setup.py install"
+    end
 
   end
+
 
   # pip install wheel resource or array of wheel resources (verbose)
   def do_install(targets)
