@@ -15,6 +15,17 @@ class WheelResource < Resource
   end
 end
 
+# Change 'pip install' parameters
+Language::Python::Virtualenv::Virtualenv.class_eval do
+  private
+
+  def do_install(targets)
+    targets = [targets] unless targets.is_a? Array
+    @formula.system @venv_root/"bin/pip", "install",
+                    "-v", *targets
+  end
+end
+
 class Golem < Formula
   desc 'Golem Worldwide Supercomputer'
   homepage 'https://github.com/golemfactory/golem/'
@@ -45,39 +56,40 @@ class Golem < Formula
   end
 
 
+  include Language::Python::Virtualenv
+
   def install
-
-    # download wheel resources
-    # check sha256
-    # and pip install from cached location
-    res = resource('sip')
-    res.stage do
-      do_install(res.downloader.cached_location)
-    end
-
-    res = resource('PyQt5')
-    res.stage do
-      do_install(res.downloader.cached_location)
-    end
 
     prefix.install Dir['*']
 
     cd prefix do
-      system "#{HOMEBREW_PREFIX}/bin/pip install --upgrade pip setuptools"
-      system "sudo #{HOMEBREW_PREFIX}/bin/pip install -vr requirements.txt"
-      system "sudo #{HOMEBREW_PREFIX}/bin/python setup.py install"
+
+      venv = virtualenv_create(libexec)
+      res = resource('sip')
+      res.stage do
+        venv.pip_install(String(res.downloader.cached_location))
+      end
+
+      res = resource('PyQt5')
+      res.stage do
+        venv.pip_install(String(res.downloader.cached_location))
+      end
+
+      f = File.open("requirements.txt") or die "Unable to open requirements.txt..."
+      f.each_line { |line|
+
+        #todo
+        next if line.include? 'devp2p>=0.5.1'
+
+        venv.pip_install(line)
+      }
+
+      system "source #{libexec}/bin/activate"
+      system "#{libexec}/bin/python setup.py install"
+      system "docker-machine start default"
+      system "eval $(docker-machine env)"
     end
 
-  end
-
-
-  # pip install wheel resource or array of wheel resources (verbose)
-  def do_install(targets)
-    targets = [targets] unless targets.is_a? Array
-    system "#{HOMEBREW_PREFIX}/bin/pip",
-           'install',
-           '-v',
-           *targets
   end
 
 end
