@@ -29,9 +29,9 @@ end
 class Golem < Formula
   desc 'Golem Worldwide Supercomputer'
   homepage 'https://github.com/golemfactory/golem/'
-  url 'https://github.com/golemfactory/golem/archive/0.3.2.tar.gz'
-  version '0.3.2'
-  sha256 '85cfaac58a0797fd4e8f5d9026c99878523d38eb6d3430994b1fd444533d6f49'
+  url "https://github.com/golemfactory/golem/archive/0.3.4.tar.gz"
+  version '0.3.4'
+  sha256 "aa6a585e2c4cd576f14a90868995275967271bf7e9793092326e01ee54725c0f"
 
 
   depends_on 'python'
@@ -64,30 +64,30 @@ class Golem < Formula
 
     cd prefix do
 
+      #virtualenv DEST_DIR
       venv = virtualenv_create(libexec)
+
       res = resource('sip')
       res.stage do
+        #pip install cached_location
         venv.pip_install(String(res.downloader.cached_location))
       end
 
       res = resource('PyQt5')
       res.stage do
+        #pip install cached_location
         venv.pip_install(String(res.downloader.cached_location))
       end
 
       f = File.open("requirements.txt") or die "Unable to open requirements.txt..."
       f.each_line { |line|
-
-        #todo
-        next if line.include? 'devp2p>=0.5.1'
-
+        #pip install requirement
         venv.pip_install(line)
       }
 
-      system "source #{libexec}/bin/activate"
-      system "#{libexec}/bin/python setup.py install"
-      system "docker-machine start default"
-      system "eval $(docker-machine env)"
+      #python setup.py install
+      system "python", *Language::Python.setup_install_args(prefix)
+
     end
 
   end
