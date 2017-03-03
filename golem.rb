@@ -40,7 +40,6 @@ class Golem < Formula
   depends_on 'xhyve'
   depends_on 'docker-machine-driver-xhyve'
   depends_on 'ethereum/ethereum/ethereum'
-  depends_on 'https://gist.github.com/shazow/c71c652409015479a7e6/raw/secp256k1.rb'
   depends_on 'ipfs'
   depends_on 'openexr'
 
