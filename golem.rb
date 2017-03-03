@@ -59,6 +59,13 @@ class Golem < Formula
 
   def install
 
+    # docker-machine-driver-xhyve need root owner and uid
+    # https://github.com/zchee/docker-machine-driver-xhyve
+    system "echo docker-machine-driver-xhyve need root owner and uid"
+    system "sudo chown root:wheel #{HOMEBREW_PREFIX}/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve"
+    system "sudo chmod u+s #{HOMEBREW_PREFIX}/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve"
+
+
     prefix.install Dir['*']
 
     cd prefix do
