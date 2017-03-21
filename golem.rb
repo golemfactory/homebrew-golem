@@ -42,6 +42,7 @@ class Golem < Formula
   depends_on 'ethereum/ethereum/ethereum'
   depends_on 'ipfs'
   depends_on 'openexr'
+  depends_on 'freeimage'
 
 
   resource 'sip', WheelResource do
