@@ -29,9 +29,9 @@ end
 class Golem < Formula
   desc 'Golem Worldwide Supercomputer'
   homepage 'https://github.com/golemfactory/golem/'
-  url "https://github.com/golemfactory/golem/archive/0.3.6.tar.gz"
-  version '0.3.6'
-  sha256 "ee3451a41be01adc50b9042726cb9e26b9d0e3ca0b72aff83bed5938807f4d88"
+  url "https://github.com/golemfactory/golem/archive/0.3.7.tar.gz"
+  version '0.3.7'
+  sha256 "610d0b9f6a795071429111db4fb70339fc30e4177d75bbc92cbf3ad9dea6637e"
 
 
   depends_on 'python'
