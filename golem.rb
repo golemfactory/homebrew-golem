@@ -5,7 +5,6 @@ class Golem < Formula
   version '0.3.2'
   sha256 "0de397ce6921b8c0145eddd308146d31cf197ce9b341085f371e3d12b47fa496"
 
-  depends_on 'python'
   depends_on 'qt@5.7'
   depends_on 'docker-machine'
   depends_on 'xhyve'
