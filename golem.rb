@@ -1,9 +1,9 @@
 class Golem < Formula
   desc 'Golem Worldwide Supercomputer'
   homepage 'https://github.com/golemfactory/golem/'
-  url 'https://github.com/golemfactory/golem/releases/download/0.3.2/golem.0.3.2.tar.gz'
+  url 'https://github.com/golemfactory/golem/releases/download/0.3.2/golem-0.3.2.tar.gz'
   version '0.3.2'
-  sha256 "0de397ce6921b8c0145eddd308146d31cf197ce9b341085f371e3d12b47fa496"
+  sha256 'a4d7b01bde97f04d2781530d57c524d6a6bd375e28fb524e84eeb7f2c593458d'
 
   depends_on 'qt@5.7'
   depends_on 'docker-machine'
@@ -18,7 +18,7 @@ class Golem < Formula
 
     # docker-machine-driver-xhyve need root owner and uid
     # https://github.com/zchee/docker-machine-driver-xhyve
-    system "echo docker-machine-driver-xhyve need root owner and uid"
+    system 'echo docker-machine-driver-xhyve need root owner and uid'
     system "sudo chown root:wheel #{HOMEBREW_PREFIX}/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve"
     system "sudo chmod u+s #{HOMEBREW_PREFIX}/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve"
 
