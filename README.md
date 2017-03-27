@@ -32,7 +32,7 @@ brew switch golem <version>
 ```
 
 
-##Troubleshooting
+## Troubleshooting
 
 * Use `--verbose` to get more info while installing.
 * Run `brew update` and `brew upgrade`.
