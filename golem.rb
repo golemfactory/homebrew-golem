@@ -13,7 +13,7 @@ class Golem < Formula
   depends_on 'ipfs'
   depends_on 'openexr'
   depends_on 'freeimage'
-  depends_on 'golemfactory/hyperg'
+  depends_on 'hyperg'
 
   def install
 
