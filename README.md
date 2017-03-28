@@ -38,4 +38,4 @@ brew switch golem <version>
 * Run `brew update` and `brew upgrade`.
 * Fix what the `brew doctor` says.
 * Reinstall dependencies.
-* Remove docker images `rm -rd /Users/<user>/.docker/machine/machines/*`.
+* Remove docker images `rm -rd /Users/<user>/.docker/machine/machines/golem/*`.
