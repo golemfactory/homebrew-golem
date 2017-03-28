@@ -2,8 +2,8 @@ class Golem < Formula
   desc 'Golem Worldwide Supercomputer'
   homepage 'https://github.com/golemfactory/golem/'
   url 'https://github.com/golemfactory/golem/releases/download/0.3.2/golem-0.3.2.tar.gz'
+  sha256 '1eba95e3a4baa93c1589385b44c0330e02f59b24c5294da36df310f45591bb4f'
   version '0.3.2'
-  sha256 'a4d7b01bde97f04d2781530d57c524d6a6bd375e28fb524e84eeb7f2c593458d'
 
   depends_on 'qt@5.7'
   depends_on 'docker-machine'
