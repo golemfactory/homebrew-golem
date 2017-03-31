@@ -8,7 +8,7 @@ System Mac OS X 10.12 (Sierra) or later.
 
 [Homebrew](https://brew.sh/) - The missing package manager for Mac OS.
 
-Public IP addres or connection via port (see [installation notes](https://github.com/golemfactory/golem/wiki/Installation))
+Public IP addres or connection via port (see [installation notes](https://github.com/golemfactory/golem/wiki/Installation)).
 
 ## Installation of Golem
 ```
