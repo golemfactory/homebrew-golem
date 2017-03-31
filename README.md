@@ -44,6 +44,7 @@ brew switch golem <version>
 * Use `--verbose` to get more info while installing.
 * Run `brew update` and `brew upgrade`.
 * Fix what the `brew doctor` says.
-* Reinstall dependencies.
 * Remove docker images `rm -rd /Users/<user>/.docker/machine/machines/golem/*`.
 * Remove LOCK file `rm /Users/<user>/Library/Application\ Support/golem/default/LOCK`.
+* Reinstall dependencies `brew reinstall package`, to list dependencies use `brew info golem`
+* Reinstall Golem `brew tap golemfactory/golem` `brew reinstall golem`
