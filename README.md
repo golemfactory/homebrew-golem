@@ -46,4 +46,4 @@ brew switch golem <version>
 * Fix what the `brew doctor` says.
 * Reinstall dependencies.
 * Remove docker images `rm -rd /Users/<user>/.docker/machine/machines/golem/*`.
-* Remove LOCK file `rm /Users/hawk/Library/Application\ Support/golem/default/LOCK`.
+* Remove LOCK file `rm /Users/<user>/Library/Application\ Support/golem/default/LOCK`.
