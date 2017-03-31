@@ -1,7 +1,7 @@
 homebrew-golem
 =================
 
-Homebrew Tap for Golem
+Homebrew Tap for Golem. Requires Mac OS X 10.12 (Sierra).
 
 ## Installation of Golem
 ```
