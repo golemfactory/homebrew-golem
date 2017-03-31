@@ -1,8 +1,0 @@
-2017-04-01 01:54:33 ERROR    golem.docker.config_manager         Couldn't read CPU affinity: 'Process' object has no attribute 'cpu_affinity'
-2017-04-01 01:54:35 INFO     golem.rpc.crossbar                  Using default node shutdown triggers [u'shutdown_on_worker_exit'] 
-2017-04-01 01:54:35 INFO     golem.rpc.crossbar                  Configuring node from local configuration ... 
-2017-04-01 01:54:35 INFO     golem.rpc.crossbar                  Starting 1 workers ... 
-2017-04-01 01:54:37 INFO     golem.rpc.crossbar                  Router 'worker-001': realm 'realm-001' (named 'golem') started 
-2017-04-01 01:54:37 INFO     golem.rpc.crossbar                  Router 'worker-001': role 'role-001' (named 'anonymous') started on realm 'realm-001' 
-2017-04-01 01:54:37 INFO     golem.rpc.crossbar                  Router 'worker-001': transport 'transport-001' started 
-2017-04-01 01:54:37 INFO     golem.rpc.crossbar                  Local node configuration applied. 
