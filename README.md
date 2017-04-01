@@ -22,13 +22,26 @@ Please keep in mind that Golem depends on many packages. Therefore, the installa
 `golemapp`
 
 
+## Reinstallation
+```
+(temporary) brew untap ethereum/ethereum
+brew tap golemfactory/golem
+brew reinstall golem
+```
+
+
 ## Upgrading
 ```
 brew update && brew upgrade
 ```
 
 
-## Versions
+## Info and Versions
+Print information about installed Golem (including dependencies) with:
+```
+brew info golem
+```
+
 List available versions with:
 ```
 ls -l /usr/local/Cellar/golem
@@ -47,5 +60,3 @@ brew switch golem <version>
 * Fix what the `brew doctor` says.
 * Remove docker images `rm -rd /Users/<user>/.docker/machine/machines/golem/*`.
 * Remove LOCK file `rm /Users/<user>/Library/Application\ Support/golem/default/LOCK`.
-* Reinstall dependencies `brew reinstall package`, to list dependencies use `brew info golem`
-* Reinstall Golem `brew tap golemfactory/golem` `brew reinstall golem`
