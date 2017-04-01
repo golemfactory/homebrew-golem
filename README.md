@@ -15,6 +15,7 @@ Public IP addres or connection via port (see [installation notes](https://github
 brew tap golemfactory/golem
 brew install golem
 ```
+Please keep in mind that Golem depends on many packages. Therefore, the installation varies on the computer. Some of the packages may already be installed on your computer and the others have to be linked. A typical example is the `docker-machine` package, which provides `brew link docker-machine`. After linking, you must restart Golem installation.
 
 
 ## Running Golem
