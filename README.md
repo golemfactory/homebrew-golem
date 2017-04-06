@@ -30,8 +30,13 @@ More advanced users can patch `go-ethereum` v1.5.9 (see [link](https://github.co
 
 Users who installed `golem` before April 6th, 2017 should run:
 ```
-brew untap mfranciszkiewicz/ethereum/ethereum
-brew reinstall --devel ethereum/ethereum/ethereum
+brew untap mfranciszkiewicz/ethereum
+```
+Depending on the installation, some users may have: `Error: No available tap mfranciszkiewicz/ethereum.` Subsequently:
+```
+brew uninstall ethereum
+sudo rm -rd ~/Library/Caches/Homebrew/*
+brew install --devel ethereum/ethereum/ethereum
 ```
 
 ## Installation of Golem
