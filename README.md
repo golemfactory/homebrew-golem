@@ -79,6 +79,7 @@ brew switch golem <version>
 ## Troubleshooting
 
 * Use `--verbose` to get more info while installing.
+* Remove cached Homebrew files `sudo rm -rd ~/Library/Caches/Homebrew/*`
 * Run `brew update && brew upgrade`.
 * Fix what the `brew doctor` says.
 * Remove docker images `rm -rd /Users/<user>/.docker/machine/machines/golem/*`.
