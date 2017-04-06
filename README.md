@@ -4,7 +4,7 @@ homebrew-golem
 Homebrew Tap for Golem.
 
 ## Requirements
-System Mac OS X 10.12 (Sierra) or later.
+System Mac OS X 10.10 (Yosemite) or later.
 
 [Homebrew](https://brew.sh/) - The missing package manager for Mac OS.
 
