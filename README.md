@@ -28,7 +28,7 @@ brew reinstall --devel ethereum/ethereum/ethereum
 ```
 More advanced users can patch `go-ethereum` v1.5.9 (see [link](https://github.com/golang/go/issues/19734)).
 
-Users who installed `golem` before April 6. 2017 should run:
+Users who installed `golem` before April 6th, 2017 should run:
 ```
 brew untap mfranciszkiewicz/ethereum/ethereum
 brew reinstall --devel ethereum/ethereum/ethereum
@@ -79,7 +79,7 @@ brew switch golem <version>
 ## Troubleshooting
 
 * Use `--verbose` to get more info while installing.
-* Run `brew update` and `brew upgrade`.
+* Run `brew update && brew upgrade`.
 * Fix what the `brew doctor` says.
 * Remove docker images `rm -rd /Users/<user>/.docker/machine/machines/golem/*`.
 * Remove LOCK file `rm /Users/<user>/Library/Application\ Support/golem/default/LOCK`.
