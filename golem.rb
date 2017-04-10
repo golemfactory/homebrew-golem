@@ -14,6 +14,7 @@ class Golem < Formula
   depends_on 'openexr'
   depends_on 'freeimage'
   depends_on 'golemfactory/hyperg/hyperg'
+  depends_on 'openssl'
 
 
   def install
