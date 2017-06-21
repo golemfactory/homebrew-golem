@@ -15,6 +15,7 @@ class Golem < Formula
   depends_on 'freeimage'
   depends_on 'golemfactory/hyperg/hyperg'
   depends_on 'openssl'
+  depends_on 'ethereum/ethereum/ethereum'
 
 
   def install
