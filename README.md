@@ -48,7 +48,9 @@ Please keep in mind that Golem depends on many packages. Therefore, the installa
 
 
 ## Running Golem
-`golemapp`
+```
+golemapp
+```
 
 
 ## Reinstallation
