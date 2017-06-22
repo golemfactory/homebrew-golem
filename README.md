@@ -35,6 +35,10 @@ brew reinstall golem
 brew update && brew upgrade
 ```
 
+## Removing
+```
+brew uninstall golem
+```
 
 ## Info and Versions
 Print information about installed Golem (including dependencies) with:
