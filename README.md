@@ -10,35 +10,6 @@ System Mac OS X 10.10 (Yosemite) or later.
 
 Public IP addres or connection via port (see [installation notes](https://github.com/golemfactory/golem/wiki/Installation)).
 
-
-
-Due to an incompatibility of recent `Xcode` and `ethereum` we have removed `ethereum` as dependency from `golem` formula.
-However, `ethereum` must be installed before `golem`. To install `ethereum` please tap into your system terminal:
-```
-brew install ethereum/ethereum/ethereum
-```
-
-The `ethereum` compiles during installation with Homebrew, and the new `Xcode` produces something that may not start. 
-It is dependant on the Xcode you have on your computer. This can easily be checked by putting `geth` in the system terminal. 
-If you get `Killed: 9` as a result, you have a problem.
-
-There are few ways to go around the problem. One of these is to install version under development:
-```
-brew reinstall --devel ethereum/ethereum/ethereum
-```
-More advanced users can patch `go-ethereum` v1.5.9 (see [link](https://github.com/golang/go/issues/19734)).
-
-Users who installed `golem` before April 6th, 2017 should run:
-```
-brew untap mfranciszkiewicz/ethereum
-```
-Depending on the installation, some users may have: `Error: No available tap mfranciszkiewicz/ethereum.` Subsequently:
-```
-brew uninstall ethereum
-sudo rm -rd ~/Library/Caches/Homebrew/*
-brew install --devel ethereum/ethereum/ethereum
-```
-
 ## Installation of Golem
 ```
 brew tap golemfactory/golem
@@ -48,7 +19,8 @@ Please keep in mind that Golem depends on many packages. Therefore, the installa
 
 
 ## Running Golem
-`golemapp`
+Tap `golemapp` into your terminal. 
+To run command line version of Golem please tap `golemcli`.
 
 
 ## Reinstallation
