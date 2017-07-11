@@ -1,32 +1,37 @@
 homebrew-golem
 =================
 
-Homebrew Tap for Golem.
+Homebrew and Caskroom Tap for Golem.
 
 ## Requirements
-System Mac OS X 10.10 (Yosemite) or later.
+- __A public IP address or forwarded TCP ports: 40102, 40103 and 3282__ (see [installation notes](https://github.com/golemfactory/golem/wiki/Installation)).
 
-[Homebrew](https://brew.sh/) - The missing package manager for Mac OS.
+- Mac OS X 10.10 (Yosemite) or later.
 
-Public IP addres or connection via port (see [installation notes](https://github.com/golemfactory/golem/wiki/Installation)).
+- [Homebrew](https://brew.sh/) - The missing package manager for Mac OS.
 
-## Installation of Golem
+## Installation
 ```
+brew tap caskroom/cask
 brew tap golemfactory/golem
-brew install golem
+brew cask install golem
 ```
 Please keep in mind that Golem depends on many packages. Therefore, the installation varies on the computer. Some of the packages may already be installed on your computer and the others have to be linked. A typical example is the `docker-machine` package, which provides `brew link docker-machine`. After linking, you must restart Golem installation.
 
+`docker-machine-driver-xhyve` package needs root owner and uid, therfore you will be asked for root password during installation.
 
 ## Running Golem
-Tap `golemapp` into your terminal. 
-To run command line version of Golem please tap `golemcli`.
+Type `golem` into Spotlight or select `golem` from Applications.
+
+__Golem is still under development and is not signed with a valid signature.
+The first time you run Golem, your Mac OS X system will surely shout out that it cannot be opened because the software is from an undefined developer. To work around the problem please double click the application from Applications folder in Finder together with `control` key. Subsequently, click `open`.__
 
 
-## Reinstallation
+## Reinstalling
 ```
 brew tap golemfactory/golem
 brew reinstall golem
+brew cask reinstall golem
 ```
 
 
@@ -37,6 +42,7 @@ brew update && brew upgrade
 
 ## Removing
 ```
+brew cask uninstall golem
 brew uninstall golem
 ```
 
