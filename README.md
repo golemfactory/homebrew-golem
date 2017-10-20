@@ -11,6 +11,7 @@ Homebrew and Caskroom Tap for Golem.
 - [Homebrew](https://brew.sh/) - The missing package manager for Mac OS.
 
 ## Installation
+Type in terminal:
 ```
 brew tap caskroom/cask
 brew tap golemfactory/golem
