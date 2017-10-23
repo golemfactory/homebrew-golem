@@ -6,7 +6,6 @@ class Golem < Formula
   sha256 'a6f23d860c485e54abff1d0fc8a3d300b1c0d84dff67b92e99bb95f94204aa54'
   url 'https://github.com/golemfactory/golem/releases/download/0.8.1/golem-macos-0.8.1.tar.gz'
 
-  depends_on 'qt'
   depends_on 'docker'
   depends_on 'docker-machine'
   depends_on 'xhyve'
