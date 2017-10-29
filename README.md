@@ -75,5 +75,5 @@ brew switch golem <version>
 * Remove cached Homebrew files `sudo rm -rd ~/Library/Caches/Homebrew/*`
 * Run `brew update && brew upgrade`.
 * Fix what the `brew doctor` says.
-* Remove docker images `rm -rd /Users/<user>/.docker/machine/machines/golem/*`.
-* Remove LOCK file `rm /Users/<user>/Library/Application\ Support/golem/default/LOCK`.
+* Remove docker images `sudo rm -rd ~/.docker/machine/machines/golem/*`.
+* Remove LOCK file `sudo rm ~/Library/Application\ Support/golem/default/LOCK`.
