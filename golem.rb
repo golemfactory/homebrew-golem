@@ -2,9 +2,9 @@ class Golem < Formula
   desc 'Golem Worldwide Supercomputer'
   homepage 'https://github.com/golemfactory/golem/'
 
-  version '0.9.0'
-  sha256 '21ccf2d9a71881558ec6dd807f5ca314a6b99907c8f77adc944b03e38f91e818'
-  url 'https://github.com/golemfactory/golem/releases/download/0.9.0/golem-macos-0.9.0.tar.gz'
+  version '0.9.1'
+  sha256 'a7e4338c4c18a6ff9711a99342ab0bcbe9f1af47bf4e93bfbcc62678d7bc9e53'
+  url 'https://github.com/golemfactory/golem/releases/download/0.9.1/golem-macos-0.9.1.tar.gz'
 
   depends_on 'docker'
   depends_on 'docker-machine'
@@ -15,7 +15,6 @@ class Golem < Formula
   depends_on 'freeimage'
   depends_on 'golemfactory/hyperg/hyperg'
   depends_on 'openssl'
-  depends_on 'ethereum/ethereum/ethereum'
 
   def install
         bin.install 'golemapp'
