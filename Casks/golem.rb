@@ -8,6 +8,7 @@ cask 'golem' do
 
   auto_updates true
   depends_on formula: 'golemfactory/golem/golem'
+  depends_on cask: 'golem-mainnet-launcher'
 
   app 'golem.app'
 end
