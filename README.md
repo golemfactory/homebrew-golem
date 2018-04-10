@@ -48,6 +48,7 @@ brew update && brew upgrade
 
 ## Removing
 ```
+brew cask uninstall golem-mainnet-launcher
 brew cask uninstall golem
 brew uninstall golem
 ```
