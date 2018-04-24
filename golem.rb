@@ -3,7 +3,7 @@ class Golem < Formula
   homepage 'https://github.com/golemfactory/golem/'
 
   version '0.15.1'
-  sha256 'ab7ff33616e367e0a15161d5e2d5b06060c9d3e2426ac1f963694e22ded4153f'
+  sha256 '49f087e5ddab8f38121d039c98d7bdc8c2a575ee7078528b7bc4cd27601e6508'
   url 'https://github.com/golemfactory/golem/releases/download/0.15.1/golem-0.15.1-macOS.tar.gz'
 
   depends_on 'docker'
