@@ -2,9 +2,9 @@ class Golem < Formula
   desc 'Golem Worldwide Supercomputer'
   homepage 'https://github.com/golemfactory/golem/'
 
-  version '0.16.1'
-  sha256 '89e097e9b3dfd7e04b50158429320997d2a7de9093a2f5bb4699793d6d930719'
-  url 'https://github.com/golemfactory/golem/releases/download/0.16.1/golem-0.16.1-macOS.tar.gz'
+  version '0.16.2'
+  sha256 '1f30fb6d9431183d0117c93bcf6b5b3a984026d6315d5c6243d7a2d2cb2dc5a7'
+  url 'https://github.com/golemfactory/golem/releases/download/0.16.2/golem-0.16.2-macOS.tar.gz'
 
   depends_on 'docker'
   depends_on 'docker-machine'
