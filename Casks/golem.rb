@@ -12,4 +12,9 @@ cask 'golem' do
   depends_on cask: 'docker'
 
   app 'golem.app'
+
+  # Creates a symlink for the newly installed 'docker' binary
+  FileUtils.ln_sf "/Applications/Docker.app/Contents/Resources/bin/docker", "/usr/local/bin/docker"
+  # Removes the symlink on deinstallation
+  uninstall delete: "/usr/local/bin/docker"
 end
