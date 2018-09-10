@@ -14,7 +14,9 @@ cask 'golem' do
   app 'golem.app'
 
   # Creates a symlink for the newly installed 'docker' binary
-  FileUtils.ln_sf "/Applications/Docker.app/Contents/Resources/bin/docker", "/usr/local/bin/docker"
+  postflight do
+    FileUtils.ln_sf("/Applications/Docker.app/Contents/Resources/bin/docker", "/usr/local/bin/docker")
+  end
   # Removes the symlink on deinstallation
   uninstall delete: "/usr/local/bin/docker"
 end
