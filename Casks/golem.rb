@@ -9,6 +9,14 @@ cask 'golem' do
   auto_updates true
   depends_on formula: 'golemfactory/golem/golem'
   depends_on cask: 'golem-mainnet-launcher'
+  depends_on cask: 'docker'
 
   app 'golem.app'
+
+  # Creates a symlink for the newly installed 'docker' binary
+  postflight do
+    FileUtils.ln_sf("/Applications/Docker.app/Contents/Resources/bin/docker", "/usr/local/bin/docker")
+  end
+  # Removes the symlink on deinstallation
+  uninstall delete: "/usr/local/bin/docker"
 end
