@@ -3,7 +3,7 @@ class Golem < Formula
   homepage 'https://github.com/golemfactory/golem/'
 
   version '0.20.0'
-  sha256 '246c488fdcaa4b722a3fdecb1f3a73558ae1c86eb08717cc38463c769a9adca6'
+  sha256 'bc2e91eb78bceb432dac6e588dd80fa0b32760c02f74795f9d41badfcf75994c'
   url 'https://github.com/golemfactory/golem/releases/download/0.20.0/golem-0.20.0-macOS.tar.gz'
 
   depends_on 'openexr'
