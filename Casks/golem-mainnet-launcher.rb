@@ -1,7 +1,7 @@
 cask 'golem-mainnet-launcher' do
-  version '1.1'
-  sha256 '66bcdd193378ab4f7df6504d4d9b81510e3e6187e6a0320b4951449dc9a1656d'
-  url "https://golem-releases.cdn.golem.network/releases/0.21.0/components/Golem-mainnet-v#{version.major_minor}.zip"
+  version '1.2'
+  sha256 '9605d1e77ce567a0a89c9c19bd61c9aa9f0c29f69e5c5e2f8c3a037bca178b4a'
+  url "https://golem-releases.cdn.golem.network/releases/0.22.0/components/Golem-mainnet-v#{version.major_minor}.zip"
 
   name 'Golem Worldwide Supercomputer (mainnet)'
   homepage 'https://github.com/golemfactory/golem-mainnet-launcher-macos/'
