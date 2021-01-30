@@ -13,9 +13,9 @@ Homebrew and Caskroom Tap for Golem.
 ## Installation
 Type in terminal:
 ```
-brew tap caskroom/cask
+brew tap homebrew/cask
 brew tap golemfactory/golem
-brew cask install golem
+brew install --cask golem
 
 # docker-machine-driver-xhyve package needs root owner and a suid bit
 
@@ -37,7 +37,7 @@ The first time you run Golem, your Mac OS X system will surely shout out that it
 ```
 brew tap golemfactory/golem
 brew reinstall golem
-brew cask reinstall golem
+brew reinstall --cask golem
 ```
 
 
@@ -48,8 +48,8 @@ brew update && brew upgrade
 
 ## Removing
 ```
-brew cask uninstall golem-mainnet-launcher
-brew cask uninstall golem
+brew uninstall --cask golem-mainnet-launcher
+brew uninstall --cask golem
 brew uninstall golem
 ```
 
